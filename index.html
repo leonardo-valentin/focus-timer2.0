@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Timer 2.0</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="svg" />
+    <script type="module" src="./src/script.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <button id="toggle-mode">
+      <span class="sr-only">Ativar light mode</span>
+      <i class="ph-bold ph-sun"></i>
+      <i class="ph-bold ph-moon-stars"></i>
+    </button>
+    <main>
+      <section class="clock-timer">
+        <div class="timer">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">06</span>
+        </div>
+        <div class="controls">
+          <button class="ph ph-play-circle" data-action="toggleRunning">
+            <span class="sr-only">Iniciar contador de tempo</span>
+          </button>
+          <button class="ph ph-pause-circle" data-action="toggleRunning">
+            <span class="sr-only">Pausar contador de tempo</span>
+          </button>
+          <button class="ph ph-stop-circle" data-action="stopRunning">
+            <span class="sr-only">Resetar contador de tempo</span>
+          </button>
+          <button class="ph ph-plus-circle" data-action="addMinutes">
+            <span class="sr-only">Adicionar 5 minutos de tempo</span>
+          </button>
+          <button class="ph ph-minus-circle" data-action="reduceMinutes">
+            <span class="sr-only">Retirar 5 minutos de tempo</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="sound-effects">
+        <button class="ph ph-tree" data-action="treeSound">
+          <input
+            type="range"
+            class="treeVolume"
+            data-sound="floresta"
+            min="0"
+            max="100"
+            step="10"
+          />
+          <span class="sr-only">Colocar som ambiente de floresta</span>
+        </button>
+        <button class="ph ph-cloud-rain" data-action="rainSound">
+          <input
+            type="range"
+            class="rainVolume"
+            data-sound="chuva"
+            min="0"
+            max="100"
+            step="10"
+          />
+
+          <span class="sr-only">Colocar som ambiente de chuva</span>
+        </button>
+        <button class="ph ph-storefront" data-action="shopSound">
+          <input
+            type="range"
+            class="shopVolume"
+            data-sound="cafeteria"
+            min="0"
+            max="100"
+            step="10"
+          />
+
+          <span class="sr-only">Colocar som ambiente de cafeteria</span>
+        </button>
+        <button class="ph ph-fire" data-action="fireSound">
+          <input
+            type="range"
+            class="fireVolume"
+            data-sound="lareira"
+            min="0"
+            max="100"
+            step="10"
+          />
+
+          <span class="sr-only">Colocar som ambiente de lareira</span>
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
