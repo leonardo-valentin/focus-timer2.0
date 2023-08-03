@@ -1,6 +1,7 @@
 import state from "./state.js"
 import * as actions from "./actions.js"
 import * as el from "./elements.js"
+import * as sound from "./sounds.js"
 
 export let pauseCountDown
 
@@ -16,6 +17,7 @@ export function countDown() {
     }
     if (minutes < 0) {
       actions.stopRunning()
+      sound.kitchenTimer.play()
       return
     }
 

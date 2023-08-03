@@ -10,6 +10,13 @@ export const buttonPressAudio = new Audio("../../assets/button-press.wav")
 
 export const kitchenTimer = new Audio("../../assets/kichen-timer.mp3")
 
+chuva.preload
+cafeteria.preload
+floresta.preload
+lareira.preload
+buttonPressAudio.preload
+kitchenTimer.preload
+
 cafeteria.loop = true
 chuva.loop = true
 floresta.loop = true
